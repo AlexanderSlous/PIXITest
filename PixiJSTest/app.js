@@ -25,7 +25,7 @@ const Graphics = PIXI.Graphics;
 const rectangle = new Graphics();
 rectangle.beginFill(0xAA33BB)
 .lineStyle(4, 0xFFEA00, 1)
-.drawRect(200, 200, 100, 120)
+.drawRect(0, 0, 1920, 1080)
 .endFill();
 
 //circle
@@ -65,6 +65,10 @@ myText2.y = 750;
 //Setting the center so the rotation doesn't look weird
 myText2.anchor.set = (0.5, 0.5);
 
+//monkey sound
+
+//const sound = PIXI.sound.Sound.from('./sounds/monkey.wav');
+
 //loop creation + START text movement
 
 app.ticker.add(delta => loop(delta));
@@ -101,6 +105,7 @@ Sprite1.on('pointerdown', function()
 {
     Sprite1.scale.x += 0.1;
     Sprite1.scale.y += 0.1;
+    //sound.play();
 })
 
 //Moves circle to mouse
